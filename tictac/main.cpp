@@ -173,11 +173,16 @@ int whoGoesFirst(){
 }
 
 char get_playerSymbol(){
-    std::string msg = "Would you like to play X or O? (X/O): ";
-    std::cout << msg;
-    char answer;
-    std::cin >> answer;
-    return answer;
+    while (true){
+        std::string msg = "Would you like to play X or O? (X/O): ";
+        std::cout << msg;
+        char answer;
+        std::cin >> answer;
+        if (answer == 'X' | answer == 'O'){
+//Ask again
+            return answer;
+        }
+    }
 }
 
 
@@ -204,7 +209,6 @@ std::vector<std::vector<char> > play_turn(std::vector<std::vector<char> > gameBo
     }
     return gameBoard;
 }
-
 
 
 std::vector<char> check_status(std::vector<std::vector<char> > gameBoard, char playerSymbol, char computerSymbol){
