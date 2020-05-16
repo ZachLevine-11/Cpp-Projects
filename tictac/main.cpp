@@ -207,10 +207,9 @@ std::vector<std::vector<char> > play_turn(std::vector<std::vector<char> > gameBo
 
 
 
-
 std::vector<char> check_status(std::vector<std::vector<char> > gameBoard, char playerSymbol, char computerSymbol){
     for (int i = 0; i<3; i++){
-        //Check for a row win.
+        //Checking for a row win.
         if (gameBoard[i][0]==gameBoard[i][1] && gameBoard[i][1] == gameBoard[i][2] && gameBoard[i][0] != ' '){
             return {gameBoard[i][0]};
         }
