@@ -158,20 +158,6 @@ std::vector<std::vector<char> > computer_play(std::vector<std::vector<char> > ga
     return gameBoard;
 }
 
-//Return 0 for the human playerSymbol goes first, and return 1 for the computer goes first
-int whoGoesFirst(){
-    while (true){
-        std::string msg = "Would you like to play the first move? (enter 1 for yes, enter 0 to let the computer make the first move): " ;
-        std::cout << msg;
-        int ans;
-        std::cin >> ans;
-        //Make sure the playerSymbol has selected a valid option.
-        if (ans == 0 | ans == 1){
-            return ans;
-        }
-    }
-}
-
 char get_playerSymbol(){
     while (true){
         std::string msg = "Would you like to play X or O? (X/O): ";
@@ -227,7 +213,6 @@ std::vector<char> check_status(std::vector<std::vector<char> > gameBoard, char p
     if (gameBoard[0][0] == gameBoard[1][1] && gameBoard[1][1]==gameBoard[2][2] && gameBoard[0][0] != ' '){
         return {gameBoard[0][0]};
     }
-    
     else if (gameBoard[0][2] == gameBoard[1][1] && gameBoard[1][1] == gameBoard[2][0] && gameBoard[0][2] != ' '){
         return {gameBoard[0][2]};
     }
@@ -259,7 +244,7 @@ int main(){
         }
         board.push_back(row);
     }
-    bool playerGoesFirst = whoGoesFirst();
+    bool playerGoesFirst = true;
     bool gamerunning = true;
     while (gamerunning){
         //Print the status of the game
