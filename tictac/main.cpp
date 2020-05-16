@@ -299,7 +299,7 @@ int main(){
         std::cout << "Game ended in a draw.\n";
     }
     else{
-        std::cout << status[0] << " wins!\n ";
+        std::cout << status[0] << " wins!\n";
     }
 }
 
