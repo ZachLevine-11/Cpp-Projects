@@ -75,7 +75,6 @@ int minimax_score(std::vector<std::vector<char> > gameBoard, int depth, char pla
     return 0;
 }
 
-
 //Obtain the maximum value that the maximizer or minimizer can obtain, simulating a game between the two until a terminal game state is reached.
 int miniMax(std::vector<std::vector<char> > gameBoard, int depth, bool isMaximizer, char playerSymbol){
     int bestScore;
@@ -171,7 +170,6 @@ char get_playerSymbol(){
     }
 }
 
-
 std::vector<std::vector<char> > play_turn(std::vector<std::vector<char> > gameBoard, char playerSymbol){
     bool moved = false;
     while (not moved){
@@ -195,7 +193,6 @@ std::vector<std::vector<char> > play_turn(std::vector<std::vector<char> > gameBo
     }
     return gameBoard;
 }
-
 
 std::vector<char> check_status(std::vector<std::vector<char> > gameBoard, char playerSymbol, char computerSymbol){
     for (int i = 0; i<3; i++){
@@ -223,7 +220,6 @@ std::vector<char> check_status(std::vector<std::vector<char> > gameBoard, char p
         return {'N'};
     }
 }
-
 
 int main(){
     std::vector<int> gameStatus;
