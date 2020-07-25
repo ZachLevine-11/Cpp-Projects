@@ -19,4 +19,4 @@ def givesentence(s):
         yeet = yeet*primes[ps[s[i]]]
     return(ddd)
 
-print(givesentence("greg"))
+    
