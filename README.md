@@ -13,4 +13,4 @@ an autoencoder for .wav files that runs songs through a neural network and then 
 
 
 ### Muse tools
-Headband EEG recording artefact removal tools using calculus/physics, including a GUI built in Tkinter.
+Headband EEG recording artefact removal tools using calculus/physics and pandas, including a GUI built in Tkinter.
