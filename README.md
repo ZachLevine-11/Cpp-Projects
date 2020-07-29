@@ -5,9 +5,6 @@ Play tic tac toe against an unbeatable AI, meaning the computer will always eith
 ### nice_csv
 Read a csv file and select only certain columns or rows.
 
-### godel numbers
-encode Godel numbers for strings of characters.
-
 ### sound encoder
 an autoencoder for .wav files that runs songs through a neural network and then reconstructs them from the output.
 
